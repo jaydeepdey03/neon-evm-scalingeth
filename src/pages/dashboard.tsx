@@ -7,7 +7,7 @@ import {useWeb3Hook} from "./context/WalletProviderContext";
 export default function Dashboard() {
   const router = useRouter();
 
-  const {connectWalletToPhantom, connectWallettoMetamask} = useWeb3Hook();
+  const {handleSubmit, connectWallet, connectWallettoMetamask} = useWeb3Hook();
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-slate-10000 w-full">
@@ -19,11 +19,7 @@ export default function Dashboard() {
         >
           Connect to Neon EVM
         </Button>
-        <Button
-          variant={"outline"}
-          className=""
-          onClick={connectWalletToPhantom}
-        >
+        <Button variant={"outline"} className="" onClick={connectWallet}>
           Connect to Solana
         </Button>
       </div>
@@ -34,7 +30,7 @@ export default function Dashboard() {
           tokenAmount: "",
         }}
         onSubmit={(values) => {
-          console.log(values);
+          handleSubmit;
         }}
       >
         <Form className="flex flex-col gap-3">
