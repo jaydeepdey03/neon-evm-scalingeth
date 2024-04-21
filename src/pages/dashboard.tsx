@@ -11,7 +11,12 @@ export default function Dashboard() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-slate-10000 w-full">
-      <div className="flex flex-col gap-3 mb-3 w-1/2">
+      <div className="flex gap-3 items-center m-10">
+        <img src="/neonpay.png" alt="neon" className="w-16 aspect-square" />
+
+        <p className="text-xl font-bold">Neon Pay</p>
+      </div>
+      <div className="flex flex-col gap-3 mb-3 w-1/4">
         <Button
           variant={"outline"}
           className=""
